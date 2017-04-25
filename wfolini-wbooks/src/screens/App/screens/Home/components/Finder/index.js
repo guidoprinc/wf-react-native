@@ -3,25 +3,24 @@ import searchico from '../../../../assets/search.svg'
 import './style.css';
 
 class Finder extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = { search: "" }
-  }
-  update(e) {
+  state = {
+    search: ""
+  };
+  update = (e) => {
     this.setState({search: e.target.value})
   }
-  finder(e){
+  finder = (e) => {
     this.props.finder(this.state.search);
   }
   render(){
     return(
       <div className="Finder">
         <input  className="searchtxt" type="search" name="googlesearch"
-          onChange={this.update.bind(this)}
+          onChange={this.update}
           placeholder={'Buscar...'}
           />
         <button className="searchbutton"
-          onClick={this.finder.bind(this)}><img src={searchico} alt="srchimg"/></button>
+          onClick={this.finder}><img src={searchico} alt="srchimg"/></button>
       </div>
     );
   }

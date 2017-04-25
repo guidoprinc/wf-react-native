@@ -6,8 +6,8 @@ import './style.css';
 const Tools = (props) => {
   return (
     <div className="Tools">
-      <Filter filter={props.filter.bind(this)}/>
-      <Finder finder={props.finder.bind(this)}/>
+      <Filter filter={props.filter}/>
+      <Finder finder={props.finder}/>
     </div>
   );
 }

@@ -5,30 +5,29 @@ import booksJson from './data/books.json'
 import './style.css';
 
 class Home extends React.Component {
-  constructor() {
-    super();
-    this.state = { bookList: booksJson }
-  }
-  filter(e){
+  state = {
+    bookList: booksJson
+  };
+  filter = (e) => {
     this.setState({
       filter: e,
       search: ""
     });
   }
-  finder(e){
+  finder = (e) => {
     this.setState({ search: e })
-  }
+  };
   render() {
     let books = this.state.bookList;
     if (this.state.search && this.state.filter) {
       books = books.filter(book =>
-        ((this.state.filter === "Nombre") ? book.title : book.author)
+        book[this.state.filter]
         .toLowerCase()
-        .includes(this.state.search.toLowerCase()))
+        .includes(this.state.search.toLowerCase()));
     }
     return (
       <div className="Home">
-        <Tools finder={this.finder.bind(this)} filter={this.filter.bind(this)}/>
+        <Tools finder={this.finder} filter={this.filter}/>
         <BookList books={books}/>
       </div>
     );
