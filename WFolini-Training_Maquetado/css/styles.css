@@ -1,13 +1,12 @@
 .body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
 }
 
 .main {
   border-style: solid;
   border-width: 8px 0px 0px;
-  border-color: #f5c85f;
+  border-color: #F5C85F;
   padding: 50px;
   display: flex;
   flex-direction: row;
@@ -16,28 +15,15 @@
   align-items: center;
 }
 
-.logo,
-.separator,
-.phone {
-    margin: 0 10px;
-}
-
 .separator {
     height: 250px;
     width: 5px;
-    background: linear-gradient(white, #f5c85f, white);
+    background: linear-gradient(#FFF, #F5C85F, #FFF);
+    margin: 30px;
 }
-
-@media (max-width: 680px) {
-    .separator,
-    .phone {
-        display: none;
-    }
-}
-
 
 .features {
-  color: #fff;
+  color: #FFF;
   padding: 50px;
   background: #EEEEEE;
   background-clip: padding-box;
@@ -55,7 +41,6 @@
 }
 
 .feature {
-  height: 200px;
   width: 200px;
   padding: 10px;
   display: flex;
@@ -78,19 +63,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto;
   height: 180px;
   box-shadow: 0px 10px 40px rgba(50, 50, 50, 0.75);
-  background-color: #f5c85f
+  background-color: #F5C85F
 }
 
 .title-footer {
-  color:white;
+  color: #FFF;
   font-size: 17px;
   margin: 20px;
 }
 
-#txt-subscribe {
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.txt-subscribe {
   width: 250px;
   padding: 5px 5px;
   box-sizing: border-box;
@@ -99,15 +89,22 @@
   font-size: 20px;
 }
 
-#btn-subscribe {
+.btn-subscribe {
   background-color: transparent;
   margin: 20px;
   width: 125px;
   padding: 7px 10px;
   box-sizing: border-box;
-  border: 1px solid white;
+  border: 1px solid #FFF;
   border-radius: 5% / 30%;
   text-align: center;
   font-size: 18px;
-  color: white;
+  color: #FFF;
+}
+
+@media (max-width: 680px) {
+    .separator,
+    .phone {
+        display: none;
+    }
 }
