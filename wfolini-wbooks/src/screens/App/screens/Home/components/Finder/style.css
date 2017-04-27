@@ -1,0 +1,27 @@
+.Finder {
+    display: inline-flex;
+    margin: 10px 35px 10px 35px;
+}
+
+.searchtxt {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 14px;
+  padding: 12px;
+  color: #9b9b9b;
+  background: #f4f4f4;
+  border: 0px solid;
+  width:238px;
+  height:38px;
+  outline: 0;
+}
+
+.searchbutton {
+  background: #a5cd39;
+  border: 0px solid;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  outline: 0;
+}
