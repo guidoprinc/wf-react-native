@@ -1,5 +1,14 @@
-.booklist {
+.books {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.book {
+  margin: 35px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
 }

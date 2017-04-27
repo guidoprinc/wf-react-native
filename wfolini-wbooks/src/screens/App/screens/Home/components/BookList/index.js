@@ -1,17 +1,19 @@
 import React from 'react'
-import Book from '../../../../components/Book'
+import { Link } from 'react-router-dom'
+import { Book } from '../../../../shared/components/Book'
 import './style.css';
 
-class BookList extends React.Component{
-  render(){
-    let bookList = this.props.books;
-    return(
-      <div className="booklist">
-        {bookList.map(book =>
-          <Book key={book.id} book={book}/> )}
-      </div>
-    );
-  }
+const BookList = (props) => {
+  let bookList = props.books;
+  return (
+    <div className="books">
+      {bookList.map(book =>
+        <Link className='link' to={`/book/id=${book.id}`} key={book.id}>
+          <Book book={book}/>
+        </Link>)
+      }
+    </div>
+  )
 }
 
-export default BookList;
+export default BookList

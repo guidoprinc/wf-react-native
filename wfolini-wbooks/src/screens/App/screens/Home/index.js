@@ -1,7 +1,8 @@
 import React from 'react';
+import { Route } from 'react-router-dom'
 import BookList from './components/BookList'
 import Tools from './components/Tools'
-import booksJson from './data/books.json'
+import booksJson from '../../data/books.json'
 import './style.css';
 
 class Home extends React.Component {

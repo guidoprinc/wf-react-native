@@ -1,0 +1,16 @@
+.comment-container {
+  margin: 12px 0 12px 0;
+}
+
+.commentlist-container {
+  width: 800px;
+}
+
+.commentlist-title {
+  font-size:20px;
+  color:#a5cd39;
+  line-height:19px;
+}
+ .commentlist-comments {
+   margin: 30px;
+ }

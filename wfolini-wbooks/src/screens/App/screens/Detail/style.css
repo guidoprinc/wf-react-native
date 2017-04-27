@@ -1,0 +1,15 @@
+.bookdetail-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.separator {
+  background: #00adee;
+  width:799px;
+  height: 2px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+}

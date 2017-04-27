@@ -15,7 +15,7 @@ class Finder extends React.Component {
   render(){
     return(
       <div className="Finder">
-        <input  className="searchtxt" type="search" name="googlesearch"
+        <input className="searchtxt" type="search" name="googlesearch"
           onChange={this.update}
           placeholder={'Buscar...'}
           />
