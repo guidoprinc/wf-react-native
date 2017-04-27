@@ -1,4 +1,7 @@
 .App {
   font-family: 'Roboto', sans-serif;
   padding: 75px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

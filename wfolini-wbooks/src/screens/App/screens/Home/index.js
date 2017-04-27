@@ -1,14 +1,10 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
 import BookList from './components/BookList'
 import Tools from './components/Tools'
-import booksJson from '../../data/books.json'
 import './style.css';
 
 class Home extends React.Component {
-  state = {
-    bookList: booksJson
-  };
+  state = { };
   filter = (e) => {
     this.setState({
       filter: e,
@@ -19,7 +15,7 @@ class Home extends React.Component {
     this.setState({ search: e })
   };
   render() {
-    let books = this.state.bookList;
+    let books = this.props.books;
     if (this.state.search && this.state.filter) {
       books = books.filter(book =>
         book[this.state.filter]

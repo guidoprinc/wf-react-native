@@ -1,7 +1,6 @@
 .comment-container {
   display: flex;
   flex-direction: row;
-  width: 723px;
   min-height: 106px;
 }
 

@@ -1,14 +1,23 @@
-.bookdetail-screen {
+.linkback {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.bookdetail-detail {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-flow: wrap;
-  align-items: center;
+  align-content: center;
+  min-width: 600px;
+  max-width: 800px;
 }
 
 .separator {
   background: #00adee;
-  width:799px;
+  width: 100%;
   height: 2px;
   margin-top: 31px;
   margin-bottom: 31px;

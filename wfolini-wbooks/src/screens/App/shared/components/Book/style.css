@@ -39,7 +39,7 @@
   display: flex;
   justify-content: center;
   background: #d8d8d8;
-  margin: 0 21px 0 0;
+  margin-right: 21px;
   width: 191px;
   height: 272px;
 }
@@ -47,8 +47,7 @@
 .bookinformation{
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  min-width: 400px;
+  max-width: 588px;
 }
 
 .booktitle-detail {
@@ -108,4 +107,10 @@
 
 .bookimg {
   width: 57%;
+}
+
+@media (max-width: 964px) {
+    .booklogo-detail {
+        margin-bottom: 21px;
+    }
 }

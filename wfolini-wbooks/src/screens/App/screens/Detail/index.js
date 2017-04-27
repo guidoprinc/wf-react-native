@@ -1,5 +1,5 @@
 import React from 'react'
-import booksJson from '../../data/books.json'
+import { Link } from 'react-router-dom'
 import { COMMENT } from '../../../../constants'
 import { BookDetail } from '../../shared/components/Book'
 import CommentList from '../../shared/components/CommentList'
@@ -8,8 +8,6 @@ import './style.css'
 
 class Detail extends React.Component {
   state = {
-    bookList: booksJson,
-    // Test values
     commentsList: [
       {
         id: 1,
@@ -27,14 +25,19 @@ class Detail extends React.Component {
   };
   render(){
     return (
-      <div className="bookdetail-screen">
-        <BookDetail book={this.state.bookList[0]}/>
-        <separator className="separator"/>
-        <Suggestions/>
-        <separator className="separator"/>
-        <CommentList allowAddComment={true}
-          commentlist={this.state.commentsList}/>
-      </div >
+      <div>
+        <Link className='linkback' to={`/`}>
+          {"< Volver"}
+        </Link>
+        <div className="bookdetail-detail">
+          <BookDetail book={this.props.book}/>
+          <separator className="separator"/>
+          <Suggestions/>
+          <separator className="separator"/>
+          <CommentList allowAddComment={true}
+            commentlist={this.state.commentsList}/>
+        </div >
+      </div>
     )
   }
 }

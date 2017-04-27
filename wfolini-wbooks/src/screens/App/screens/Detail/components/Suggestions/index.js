@@ -5,7 +5,7 @@ import './style.css'
 class Suggestions extends React.Component {
   render () {
     return(
-      <div>
+      <div className="suggestions-container">
         <h1 className="title">Sugerencias</h1>
         <div className="booklist">
           <BookIcon className="bookicon"/>
