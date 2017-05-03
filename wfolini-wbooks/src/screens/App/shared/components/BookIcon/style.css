@@ -1,0 +1,11 @@
+.booklogo-icon {
+  background: #D8D8D8;
+  width: 87px;
+  height: 124px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookimg {
+  width: 57%;
+}

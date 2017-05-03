@@ -26,41 +26,16 @@
   margin: 0 0 0 16px;
 }
 
-/* Comment */
 .date {
   font-weight: lighter;
   font-size: 12px;
-  color: #4a4a4a;
+  color: #4A4A4A;
   letter-spacing: 0px;
   line-height: 0px;
 }
 
 .text {
-  font-size:14px;
-  color:#999999;
-  line-height:19px;
-}
-
-/*Add Comment*/
-
-.comment-box {
-  resize: none;
-  border: 1px solid #979797;
-  height: 73px;
-  width: 100%;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
   font-size: 14px;
-  outline: 0;
-  margin: 15px 0 15px 0 ;
-}
-
-.send-btn {
-  border: 0;
-  background: #A5CD39;
-  width: 192px;
-  height: 38px;
-  font-size: 16px;
-  color: #FFFFFF;
+  color: #999999;
+  line-height: 19px;
 }

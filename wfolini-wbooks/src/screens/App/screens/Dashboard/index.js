@@ -3,7 +3,7 @@ import BookList from './components/BookList'
 import Tools from './components/Tools'
 import './style.css';
 
-class Home extends React.Component {
+class Dashboard extends React.Component {
   state = { };
   filter = (e) => {
     this.setState({
@@ -23,7 +23,7 @@ class Home extends React.Component {
         .includes(this.state.search.toLowerCase()));
     }
     return (
-      <div className="Home">
+      <div className="Dashboard">
         <Tools finder={this.finder} filter={this.filter}/>
         <BookList books={books}/>
       </div>
@@ -31,4 +31,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Dashboard;

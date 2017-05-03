@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { COMMENT } from '../../../../constants'
-import { BookDetail } from '../../shared/components/Book'
+import BookDetail from '../../shared/components/BookDetail'
 import CommentList from '../../shared/components/CommentList'
 import Suggestions from './components/Suggestions'
 import './style.css'
@@ -26,14 +26,14 @@ class Detail extends React.Component {
   render(){
     return (
       <div>
-        <Link className='linkback' to={`/`}>
+        <Link className='linkback' to={`/dashboard`}>
           {"< Volver"}
         </Link>
         <div className="bookdetail-detail">
           <BookDetail book={this.props.book}/>
-          <separator className="separator"/>
+          <div className="separator"/>
           <Suggestions/>
-          <separator className="separator"/>
+          <div className="separator"/>
           <CommentList allowAddComment={true}
             commentlist={this.state.commentsList}/>
         </div >

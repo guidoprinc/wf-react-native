@@ -1,0 +1,49 @@
+.wbookslogo {
+  margin: 50px;
+}
+
+.form {
+  width: 500px;
+}
+
+.input {
+  outline: 0;
+  background: #F2F2F2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #E93939;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.msjerror {
+  font-size: 12px;
+  margin: 0px;
+  color: #FF0000;
+}
+
+.message {
+  margin: 15px 0 0;
+  color: #B3B3B3;
+  font-size: 12px;
+}
+
+.message a {
+  color: #00ADEE;
+  text-decoration: none;
+}

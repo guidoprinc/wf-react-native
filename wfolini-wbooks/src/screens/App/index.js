@@ -1,8 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { PrivateRoute } from './authorization'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import booksjson from './data/books.json'
-import Home from './screens/Home'
+import Dashboard from './screens/Dashboard'
 import Detail from './screens/Detail'
+import Login from './screens/Login'
+import SignUp from './screens/SignUp'
 import './style.css';
 
 class App extends React.Component {
@@ -10,15 +13,24 @@ class App extends React.Component {
     books: booksjson
   };
   findBookById = ( id ) =>
-    this.state.books.find(book => book.id == id);
+    this.state.books.find(book => book.id === parseInt(id, 10));
   render () {
     return(
       <Router>
         <div className="App">
-          <Route exact={true} path="/" render={ () => (
-              <Home books={this.state.books} />
-            )}/>
-          <Route path="/book/id=:id" render={ ({ match }) => (
+          <Route path="/Login" render={ ({ match }) => (
+              <Login/>
+          )}/>
+          <Route path="/SignUp" render={ ({ match }) => (
+              <SignUp/>
+          )}/>
+          <PrivateRoute exact={true} path="/" render={ () => (
+              <Redirect to="/dashboard"/>
+          )}/>
+          <PrivateRoute exact={true} path="/dashboard" render={ () => (
+              <Dashboard books={this.state.books} />
+          )}/>
+          <PrivateRoute path="/book/id=:id" render={ ({ match }) => (
               <Detail book={this.findBookById(match.params.id)}/>
           )}/>
         </div>

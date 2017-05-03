@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Book } from '../../../../shared/components/Book'
+import Book from '../../../../shared/components/Book'
 import './style.css';
 
 const BookList = (props) => {
