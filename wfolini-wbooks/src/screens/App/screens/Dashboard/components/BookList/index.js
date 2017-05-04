@@ -8,7 +8,7 @@ const BookList = (props) => {
   return (
     <div className="books">
       {bookList.map(book =>
-        <Link className='link' to={`/book/id=${book.id}`} key={book.id}>
+        <Link className='link' to={`/book/${book.id}`} key={book.id}>
           <Book book={book}/>
         </Link>)
       }

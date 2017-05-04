@@ -30,7 +30,7 @@ class App extends React.Component {
           <PrivateRoute exact={true} path="/dashboard" render={ () => (
               <Dashboard books={this.state.books} />
           )}/>
-          <PrivateRoute path="/book/id=:id" render={ ({ match }) => (
+          <PrivateRoute path="/book/:id" render={ ({ match }) => (
               <Detail book={this.findBookById(match.params.id)}/>
           )}/>
         </div>

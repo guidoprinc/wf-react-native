@@ -8,9 +8,6 @@ import wbooksLogoSvg from '../../assets/wbooks_logo.svg'
 import "./style.css"
 
 class Login extends React.Component {
-  static propTypes = {
-    location: PropTypes.object.isRequired
-  }
   state = {
     redirectToReferrer: Authorization.isAuthenticated(),
     loginDataIncorrect: false,

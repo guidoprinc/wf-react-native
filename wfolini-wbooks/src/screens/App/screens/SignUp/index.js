@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Authorization } from '../../authorization'
+import { Link, Redirect } from 'react-router-dom'
 import "./style.css"
 
 class SignUp extends React.Component {
@@ -18,6 +19,11 @@ class SignUp extends React.Component {
     this.setState({mail: e.target.value});
   }
   render () {
+    if (Authorization.isAuthenticated()) {
+      return (
+        <Redirect to={"/dashboard"}/>
+      )
+    }
     return (
       <div className="background">
         <div className="form-background">
